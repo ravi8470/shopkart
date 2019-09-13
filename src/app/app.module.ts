@@ -10,7 +10,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomepagebodyComponent } from './homepagebody/homepagebody.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
-
+import { PaymentComponent } from './payment/payment.component';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CategoryPageComponent } from './category-page/category-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +24,17 @@ import { ProductdetailComponent } from './productdetail/productdetail.component'
     SidebarComponent,
     HomepagebodyComponent,
     HomepageComponent,
-    ProductdetailComponent
+    ProductdetailComponent,
+    PaymentComponent,
+    LoginComponent,
+    CategoryPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
