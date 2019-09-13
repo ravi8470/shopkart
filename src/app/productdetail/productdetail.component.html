@@ -65,9 +65,9 @@
                   /></a>
                 </div>
               </div>
-              <!--  
+              <!--
 			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 			  -->
             </div>
 
@@ -90,12 +90,26 @@
               <div class="control-group">
                 <label class="control-label"><span>$222.00</span></label>
                 <div class="controls">
-                  <input type="number" class="span1" placeholder="Qty." />
+                  <input
+                    type="number"
+                    class="span1"
+                    min="1"
+                    value="1"
+                    placeholder="Qty."
+                  />
                   <button
                     type="submit"
                     class="btn btn-large btn-primary pull-right"
+                    style="margin-left: 3px"
                   >
                     Add to cart <i class=" icon-shopping-cart"></i>
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-large btn-primary pull-right"
+                    (click)="buyProduct()"
+                  >
+                    Buy <i class=" icon-shopping-cart"></i>
                   </button>
                 </div>
               </div>
