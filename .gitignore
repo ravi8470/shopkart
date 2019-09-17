@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 #project
-/src/config/secretKeys.js
+# /src/config/secretKeys.js
