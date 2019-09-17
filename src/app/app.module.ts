@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CategoryPageComponent } from './category-page/category-page.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { CategoryPageComponent } from './category-page/category-page.component';
     ProductdetailComponent,
     PaymentComponent,
     LoginComponent,
-    CategoryPageComponent
+    CategoryPageComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

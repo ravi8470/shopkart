@@ -5,6 +5,7 @@ import { ProductdetailComponent } from './productdetail/productdetail.component'
 import { PaymentComponent } from './payment/payment.component';
 import { LoginComponent } from './login/login.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
+import { NotfoundComponent } from "./notfound/notfound.component";
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'category/:name',
     component: CategoryPageComponent
+  },
+  {
+    path: '**',
+    component: NotfoundComponent
   }
 ];
 
