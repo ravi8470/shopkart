@@ -1,0 +1,39 @@
+<!-- <h1 mat-dialog-title>Hi</h1> -->
+<div mat-dialog-content>
+  <mat-tab-group>
+    <mat-tab label="Login">
+      <br />
+      <mat-form-field>
+        <input matInput placeholder="Email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary">
+        Submit
+      </button>
+    </mat-tab>
+    <mat-tab label="Signup">
+      <br />
+      <mat-form-field>
+        <input matInput placeholder="Name" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary">Submit</button></mat-tab
+    >
+  </mat-tab-group>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>
+    Ok
+  </button>
+</div> -->

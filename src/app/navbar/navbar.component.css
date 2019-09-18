@@ -1,0 +1,7 @@
+.spacefillerspan {
+  flex: 1 0 50px;
+}
+mat-toolbar > span {
+  margin-right: 20px;
+  cursor: pointer;
+}
