@@ -3,32 +3,71 @@
   <mat-tab-group>
     <mat-tab label="Login">
       <br />
-      <mat-form-field>
-        <input matInput placeholder="Email" />
-      </mat-form-field>
+      <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <mat-form-field>
+          <input matInput formControlName="email" placeholder="Email" />
+        </mat-form-field>
+        <div *ngIf="loginFormSubmitted && f.email.errors">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+          <div *ngIf="f.email.errors.email">Email is not valid</div>
+        </div>
 
-      <mat-form-field>
-        <input matInput placeholder="Password" />
-      </mat-form-field>
-      <br />
-      <button mat-raised-button color="primary">
-        Submit
-      </button>
+        <mat-form-field>
+          <input
+            matInput
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
+        </mat-form-field>
+        <div *ngIf="loginFormSubmitted && f.password.errors">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+        <br />
+        <button mat-raised-button type="submit" color="primary">
+          Submit
+        </button>
+      </form>
     </mat-tab>
     <mat-tab label="Signup">
       <br />
-      <mat-form-field>
-        <input matInput placeholder="Name" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Email" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="password" placeholder="Password" />
-      </mat-form-field>
-      <br />
-      <button mat-raised-button color="primary">Submit</button></mat-tab
-    >
+      <form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+        <mat-form-field>
+          <input matInput formControlName="name" placeholder="Name" />
+        </mat-form-field>
+        <div *ngIf="signupFormSubmitted && fs.name.errors">
+          <div *ngIf="fs.name.errors.required">Name is required</div>
+          <!-- <div *ngIf="fs.name.errors.pattern">Name is not valid</div> -->
+        </div>
+        <mat-form-field>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Email"
+          /> </mat-form-field
+        ><mat-spinner *ngIf="asv" [diameter]="20"></mat-spinner>
+        <div *ngIf="signupFormSubmitted && fs.email.errors">
+          <div *ngIf="fs.email.errors.required">Email is required</div>
+          <div *ngIf="fs.email.errors.email">Email is not valid</div>
+        </div>
+        <div *ngIf="fs.email.errors && fs.email.errors.isEmailUnique">
+          Email is already taken
+        </div>
+        <mat-form-field>
+          <input
+            matInput
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
+        </mat-form-field>
+        <div *ngIf="signupFormSubmitted && fs.password.errors">
+          <div *ngIf="fs.password.errors.required">Password is required</div>
+        </div>
+        <br />
+        <button mat-raised-button type="submit" color="primary">Submit</button>
+      </form>
+    </mat-tab>
   </mat-tab-group>
 </div>
 <!-- <div mat-dialog-actions>

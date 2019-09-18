@@ -5,3 +5,7 @@ mat-form-field {
   height: auto;
   margin-top: 10px;
 } */
+form div {
+  font-size: 0.7rem;
+  color: red;
+}
