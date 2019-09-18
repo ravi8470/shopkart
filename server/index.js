@@ -2,10 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const app = express();
-import { userModel } from "./models/user.js";
-import { connectDB } from "./utils/database/dbconfig";
-
-connectDB();
+require("./utils/database/dbconfig");
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../dist/shopkart/")));
